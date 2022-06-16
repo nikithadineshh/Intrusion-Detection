@@ -4,25 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
 </head>
 <body>
     <h1>Welcome!</h1>
     <h2>Enter the features below</h2>
-    <form id="features" name="f">
-        Feature 1:
+    <form action="result" id="features" name="f" method="POST" >
+        {% csrf_token %}
+        Source bytes(src_bytes):
         <input type="text" name="f1">
-        <br> <br> Feature 2:
+        <br> <br> Destination bytes(dst_bytes):
         <input type="text" name="f2">
-        <br> <br> Feature 3:
+        <br> <br> Destination Host service Count(dst_host_srv_count):
         <input type="text" name="f3">
-        <br> <br> Feature 4:
+        <br> <br> Logged In(logged_in):
         <input type="text" name="f4">
-        <br> <br> Feature 5:
+        <br> <br> Service Count(srv_count):
         <input type="text" name="f5">
+        <br> <br> Destination Host serror Rate(dst_host_serror_rate):
+        <input type="text" name="f6">
+        <br> <br> SError Rate(serror_rate):
+        <input type="text" name="f7">
         <br> <br>
-        <a href="result.html"><input type="button" value="Submit">
-        </a>
+        <button id="submit" type="submit">Submit</button>
+        <!-- <a href="result"><input type="button" value="Submit">
+        </a> -->
         
     </form>
 </body>
